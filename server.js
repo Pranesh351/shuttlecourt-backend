@@ -24,5 +24,5 @@ app.use('/api/subscription', subcriptionRoutes);
 mongoose.connect(process.env.MONGO_URI)
     .then(()=>{
         //Listening to port
-        app.listen(process.env.PORT, console.log('Listening to port 4000'))
+        app.listen(process.env.PORT, console.log('Listening to port'))
     }).catch((err)=>console.log(err))
