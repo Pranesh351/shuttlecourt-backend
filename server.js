@@ -14,7 +14,12 @@ app.use(express.json())
 
 // Allow requests from any origin
 app.use(cors());
-app.options('*', cors());
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 //routes
 app.use('/api/user', authRoutes);
