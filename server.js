@@ -10,7 +10,7 @@ const app= express();
 const cors = require('cors');
 
 // Allow requests from any origin
-app.use(cors({ origin: '*' }));
+app.use(cors());
 
 //middleware
 app.use(express.json())
