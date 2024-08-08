@@ -12,13 +12,8 @@ const cors = require('cors');
 //middleware
 app.use(express.json())
 
-var corsOptions = {
-    origin: [process.env.FRONTENDURL],
-    optionsSuccessStatus: 200 // For legacy browser support
-    }
-
 // Allow requests from any origin
-app.use(cors(corsOptions));
+app.use(cors());
 
 //routes
 app.use('/api/user', authRoutes);
